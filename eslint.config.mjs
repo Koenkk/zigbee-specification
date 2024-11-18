@@ -7,7 +7,7 @@ export default tseslint.config(
     ...tseslint.configs.recommended,
     prettier,
     {
-        files: ['**/*.{ts,mjs}'],
+        files: ['**/*.ts'],
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'script',
