@@ -1,0 +1,13 @@
+*-debug.log
+*-error.log
+**/.DS_Store
+/.idea
+/dist
+/tmp
+/node_modules
+/coverage
+/typedoc
+/.jest-tmp
+*.tsbuildinfo
+yarn.lock
+package-json.lock
