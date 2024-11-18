@@ -1,19 +1,19 @@
-import {Zcl, Zdo, ZdoTypes, ZSpec, ZTypes} from '../../src/index.js';
+import {Zcl, Zdo, ZdoTypes, ZSpec, ZSpecTypes} from '../../src/index.js';
 import {uint16To8Array, uint32To8Array} from '../utils.js';
 
-const IEEE_ADDRESS1: ZTypes.EUI64 = `0xfe34ac2385ff8311`;
+const IEEE_ADDRESS1: ZSpecTypes.EUI64 = `0xfe34ac2385ff8311`;
 const IEEE_ADDRESS1_BYTES = [0x11, 0x83, 0xff, 0x85, 0x23, 0xac, 0x34, 0xfe];
-const IEEE_ADDRESS2: ZTypes.EUI64 = `0x28373fecd834ba37`;
+const IEEE_ADDRESS2: ZSpecTypes.EUI64 = `0x28373fecd834ba37`;
 const IEEE_ADDRESS2_BYTES = [0x37, 0xba, 0x34, 0xd8, 0xec, 0x3f, 0x37, 0x28];
-const NODE_ID1: ZTypes.NodeId = 0xfe32;
+const NODE_ID1: ZSpecTypes.NodeId = 0xfe32;
 const NODE_ID1_BYTES = uint16To8Array(NODE_ID1);
-const NODE_ID2: ZTypes.NodeId = 0xab39;
+const NODE_ID2: ZSpecTypes.NodeId = 0xab39;
 const NODE_ID2_BYTES = uint16To8Array(NODE_ID2);
-const EXT_PAN_ID1: ZTypes.ExtendedPanId = [3, 43, 56, 23, 65, 23, 67, 23];
-const EXT_PAN_ID2: ZTypes.ExtendedPanId = [253, 231, 21, 3, 0, 44, 24, 46];
-const CLUSTER_LIST1: ZTypes.ClusterId[] = [Zcl.Clusters.genAlarms.ID, Zcl.Clusters.seMetering.ID, Zcl.Clusters.haApplianceStatistics.ID];
+const EXT_PAN_ID1: ZSpecTypes.ExtendedPanId = [3, 43, 56, 23, 65, 23, 67, 23];
+const EXT_PAN_ID2: ZSpecTypes.ExtendedPanId = [253, 231, 21, 3, 0, 44, 24, 46];
+const CLUSTER_LIST1: ZSpecTypes.ClusterId[] = [Zcl.Clusters.genAlarms.ID, Zcl.Clusters.seMetering.ID, Zcl.Clusters.haApplianceStatistics.ID];
 const CLUSTER_LIST1_BYTES = [...uint16To8Array(CLUSTER_LIST1[0]), ...uint16To8Array(CLUSTER_LIST1[1]), ...uint16To8Array(CLUSTER_LIST1[2])];
-const CLUSTER_LIST2: ZTypes.ClusterId[] = [
+const CLUSTER_LIST2: ZSpecTypes.ClusterId[] = [
     Zcl.Clusters.genOnOff.ID,
     Zcl.Clusters.genBasic.ID,
     Zcl.Clusters.ssIasZone.ID,

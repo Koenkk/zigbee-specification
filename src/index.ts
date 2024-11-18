@@ -1,4 +1,4 @@
-export type * as ZTypes from './base/definition/tstypes.js';
+export type * as ZSpecTypes from './base/definition/tstypes.js';
 export type * as ZclTypes from './zcl/definition/tstypes.js';
 export type * as ZdoTypes from './zdo/definition/tstypes.js';
 
