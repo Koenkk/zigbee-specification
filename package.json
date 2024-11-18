@@ -1,6 +1,10 @@
 {
     "name": "zigbee-specification",
     "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nerivec/zigbee-specification.git"
+    },
     "description": "ZigBee specification for NodeJS",
     "type": "module",
     "main": "dist/index.js",
@@ -15,7 +19,20 @@
         "zcl",
         "zdo"
     ],
-    "author": "",
+    "author": {
+        "name": "Koen Kanters",
+        "email": "koenkanters94@gmail.com"
+    },
+    "contributors": [
+        {
+            "name": "Koen Kanters",
+            "url": "https://github.com/Koenkk"
+        },
+        {
+            "name": "Nerivec",
+            "url": "https://github.com/Nerivec"
+        }
+    ],
     "license": "GPL-3.0-or-later",
     "scripts": {
         "lint": "eslint --max-warnings=0",
