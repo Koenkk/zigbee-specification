@@ -332,9 +332,13 @@ export const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>
                     {name: 'status', type: DataType.UINT8},
                     {name: 'groupid', type: DataType.UINT16},
                     {name: 'sceneid', type: DataType.UINT8},
-                    {name: 'transtime', type: DataType.UINT16},
-                    {name: 'scenename', type: DataType.CHAR_STR},
-                    {name: 'extensionfieldsets', type: BuffaloZclDataType.EXTENSION_FIELD_SETS},
+                    {name: 'transtime', type: DataType.UINT16, conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}]},
+                    {name: 'scenename', type: DataType.CHAR_STR, conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}]},
+                    {
+                        name: 'extensionfieldsets',
+                        type: BuffaloZclDataType.EXTENSION_FIELD_SETS,
+                        conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}],
+                    },
                 ],
             },
             removeRsp: {
@@ -366,13 +370,21 @@ export const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>
                     {name: 'status', type: DataType.UINT8},
                     {name: 'capacity', type: DataType.UINT8},
                     {name: 'groupid', type: DataType.UINT16},
-                    {name: 'scenecount', type: DataType.UINT8},
-                    {name: 'scenelist', type: BuffaloZclDataType.LIST_UINT8},
+                    {name: 'scenecount', type: DataType.UINT8, conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}]},
+                    {
+                        name: 'scenelist',
+                        type: BuffaloZclDataType.LIST_UINT8,
+                        conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}],
+                    },
                 ],
             },
             enhancedAddRsp: {
                 ID: 64,
-                parameters: [],
+                parameters: [
+                    {name: 'status', type: DataType.UINT8},
+                    {name: 'groupId', type: DataType.UINT16},
+                    {name: 'sceneId', type: DataType.UINT8},
+                ],
             },
             enhancedViewRsp: {
                 ID: 65,
@@ -380,9 +392,13 @@ export const Clusters: Readonly<Record<ClusterName, Readonly<ClusterDefinition>>
                     {name: 'status', type: DataType.UINT8},
                     {name: 'groupid', type: DataType.UINT16},
                     {name: 'sceneid', type: DataType.UINT8},
-                    {name: 'transtime', type: DataType.UINT16},
-                    {name: 'scenename', type: DataType.CHAR_STR},
-                    {name: 'extensionfieldsets', type: BuffaloZclDataType.EXTENSION_FIELD_SETS},
+                    {name: 'transtime', type: DataType.UINT16, conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}]},
+                    {name: 'scenename', type: DataType.CHAR_STR, conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}]},
+                    {
+                        name: 'extensionfieldsets',
+                        type: BuffaloZclDataType.EXTENSION_FIELD_SETS,
+                        conditions: [{type: ParameterCondition.STATUS_EQUAL, value: Status.SUCCESS}],
+                    },
                 ],
             },
             copyRsp: {
