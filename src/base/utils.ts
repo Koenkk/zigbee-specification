@@ -1,6 +1,6 @@
 import type {EUI64} from './definition/tstypes.js';
 
-import {createCipheriv} from 'crypto';
+import {createCipheriv} from 'node:crypto';
 
 import {AES_MMO_128_BLOCK_SIZE, ALL_802_15_4_CHANNELS, INSTALL_CODE_CRC_SIZE, INSTALL_CODE_SIZES} from './definition/consts.js';
 import {BroadcastAddress} from './definition/enums.js';
