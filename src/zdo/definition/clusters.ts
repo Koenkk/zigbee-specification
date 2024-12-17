@@ -136,29 +136,11 @@ export enum ClusterId {
      */
     MATCH_DESCRIPTORS_RESPONSE = 0x8006,
 
-    /** @deprecated */
-    // COMPLEX_DESCRIPTOR_REQUEST = 0x0010,
-    /** @deprecated */
-    // COMPLEX_DESCRIPTOR_RESPONSE = 0x8010,
-    /** @deprecated */
-    // USER_DESCRIPTOR_REQUEST = 0x0011,
-    /** @deprecated */
-    // USER_DESCRIPTOR_RESPONSE = 0x8011,
-    /** @deprecated */
-    // DISCOVERY_REGISTER_REQUEST = 0x0012,
-    /** @deprecated */
-    // DISCOVERY_REGISTER_RESPONSE = 0x8012,
-
     /**
      * Request: [transaction sequence number: 1]
      *          [node ID:2] [EUI64:8] [capabilities:1]
      */
     END_DEVICE_ANNOUNCE = 0x0013,
-
-    /** @deprecated */
-    // USER_DESCRIPTOR_SET = 0x0014,
-    /** @deprecated */
-    // USER_DESCRIPTOR_CONFIRM = 0x8014,
 
     /**
      * This is broadcast and only servers which have matching services respond.
@@ -173,43 +155,6 @@ export enum ClusterId {
      *           [status (== EMBER_ZDP_SUCCESS):1] [server mask:2]
      */
     SYSTEM_SERVER_DISCOVERY_RESPONSE = 0x8015,
-
-    /** @deprecated */
-    // DISCOVERY_STORE_REQUEST = 0x0016,
-    /** @deprecated */
-    // DISCOVERY_STORE_RESPONSE = 0x8016,
-    /** @deprecated */
-    // NODE_DESCRIPTOR_STORE_REQUEST = 0x0017,
-    /** @deprecated */
-    // NODE_DESCRIPTOR_STORE_RESPONSE = 0x8017,
-    /** @deprecated */
-    // POWER_DESCRIPTOR_STORE_REQUEST = 0x0018,
-    /** @deprecated */
-    // POWER_DESCRIPTOR_STORE_RESPONSE = 0x8018,
-    /** @deprecated */
-    // ACTIVE_ENDPOINTS_STORE_REQUEST = 0x0019,
-    /** @deprecated */
-    // ACTIVE_ENDPOINTS_STORE_RESPONSE = 0x8019,
-    /** @deprecated */
-    // SIMPLE_DESCRIPTOR_STORE_REQUEST = 0x001A,
-    /** @deprecated */
-    // SIMPLE_DESCRIPTOR_STORE_RESPONSE = 0x801A,
-    /** @deprecated */
-    // REMOVE_NODE_CACHE_REQUEST = 0x001B,
-    /** @deprecated */
-    // REMOVE_NODE_CACHE_RESPONSE = 0x801B,
-    /** @deprecated */
-    // FIND_NODE_CACHE_REQUEST = 0x001C,
-    /** @deprecated */
-    // FIND_NODE_CACHE_RESPONSE = 0x801C,
-    /** @deprecated */
-    // EXTENDED_SIMPLE_DESCRIPTOR_REQUEST = 0x001D,
-    /** @deprecated */
-    // EXTENDED_SIMPLE_DESCRIPTOR_RESPONSE = 0x801D,
-    /** @deprecated */
-    // EXTENDED_ACTIVE_ENDPOINTS_REQUEST = 0x001E,
-    /** @deprecated */
-    // EXTENDED_ACTIVE_ENDPOINTS_RESPONSE = 0x801E,
 
     /**
      * This is broadcast and only servers which have matching children respond.
@@ -228,11 +173,6 @@ export enum ClusterId {
 
     //-------------------------------------------------------------------------------------------------
     //-- Bind, Unbind, and Bind Management Client Services Primitives
-
-    /** @deprecated */
-    // END_DEVICE_BIND_REQUEST = 0x0020,
-    /** @deprecated */
-    // END_DEVICE_BIND_RESPONSE = 0x8020,
 
     /**
      * There are two possible formats, depending on whether the destination is a group address or a device address.
@@ -271,39 +211,6 @@ export enum ClusterId {
      */
     UNBIND_RESPONSE = 0x8022,
 
-    /** @deprecated */
-    // BIND_REGISTER_REQUEST = 0x0023,
-    /** @deprecated */
-    // BIND_REGISTER_RESPONSE = 0x8023,
-    /** @deprecated */
-    // REPLACE_DEVICE_REQUEST = 0x0024,
-    /** @deprecated */
-    // REPLACE_DEVICE_RESPONSE = 0x8024,
-    /** @deprecated */
-    // STORE_BACKUP_BIND_ENTRY_REQUEST = 0x0025,
-    /** @deprecated */
-    // STORE_BACKUP_BIND_ENTRY_RESPONSE = 0x8025,
-    /** @deprecated */
-    // REMOVE_BACKUP_BIND_ENTRY_REQUEST = 0x0026,
-    /** @deprecated */
-    // REMOVE_BACKUP_BIND_ENTRY_RESPONSE = 0x8026,
-    /** @deprecated */
-    // BACKUP_BIND_TABLE_REQUEST = 0x0027,
-    /** @deprecated */
-    // BACKUP_BIND_TABLE_RESPONSE = 0x8027,
-    /** @deprecated */
-    // RECOVER_BIND_TABLE_REQUEST = 0x0028,
-    /** @deprecated */
-    // RECOVER_BIND_TABLE_RESPONSE = 0x8028,
-    /** @deprecated */
-    // BACKUP_SOURCE_BIND_REQUEST = 0x0029,
-    /** @deprecated */
-    // BACKUP_SOURCE_BIND_RESPONSE = 0x8029,
-    /** @deprecated */
-    // RECOVER_SOURCE_BIND_REQUEST = 0x002A,
-    /** @deprecated */
-    // RECOVER_SOURCE_BIND_RESPONSE = 0x802A,
-
     /**
      * Request:  [transaction sequence number: 1]
      *           [tlvs: Variable]
@@ -317,11 +224,6 @@ export enum ClusterId {
 
     //-------------------------------------------------------------------------------------------------
     //-- Network Management Client Services
-
-    /** @deprecated */
-    // NETWORK_DISCOVERY_REQUEST = 0x0030,
-    /** @deprecated */
-    // NETWORK_DISCOVERY_RESPONSE = 0x8030,
 
     /**
      * Request:  [transaction sequence number: 1] [start index:1]
@@ -432,11 +334,6 @@ export enum ClusterId {
      */
     LEAVE_RESPONSE = 0x8034,
 
-    /** @deprecated */
-    // DIRECT_JOIN_REQUEST = 0x0035,
-    /** @deprecated */
-    // DIRECT_JOIN_RESPONSE = 0x8035,
-
     /**
      * Request:  [transaction sequence number: 1]
      *           [duration:1] [permit authentication:1]
@@ -448,11 +345,6 @@ export enum ClusterId {
      * Response: [transaction sequence number: 1] [status:1]
      */
     PERMIT_JOINING_RESPONSE = 0x8036,
-
-    /** @deprecated */
-    // CACHE_REQUEST = 0x0037,
-    /** @deprecated */
-    // CACHE_RESPONSE = 0x8037,
 
     /**
      * Request:  [transaction sequence number: 1]

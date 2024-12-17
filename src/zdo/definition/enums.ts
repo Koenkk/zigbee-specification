@@ -1,8 +1,6 @@
 export const enum LeaveRequestFlags {
     /** Leave and rejoin. */
     AND_REJOIN = 0x80,
-    /** @deprecated */
-    // AND_REMOVE_CHILDREN = 0x40,
     /** Leave. */
     WITHOUT_REJOIN = 0x00,
 }
